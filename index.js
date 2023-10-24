@@ -1,7 +1,19 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  const array = [...word];
+  const compare = [...word];
+  let reversedWord = [];
+  function reverse(array) {
+    for (let i = array.length - 1; i >= 0; i--) {
+      reversedWord.push(array.pop());
+    }
+  }
+  reverse(array);
+  // console.log(compare);
+  // console.log(reversedWord);
+  return reversedWord.toString() === compare.toString();
 }
-
+// console.log(isPalindrome("racecar"));
 /* 
   Add your pseudocode here
 */
